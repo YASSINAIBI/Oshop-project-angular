@@ -1,0 +1,11 @@
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ viewOrder.userId }}</h5>
+    <p class="card-text" *ngFor="let order of viewOrder.items">
+      this item unit price: <strong>{{ order.totalPrice | currency:'USD':true }}</strong> <br>
+      the total items of this unit is: <strong>{{ order.quantity }}</strong> items <br>
+      and the total pay of this unit is: <strong> {{ order.totalPrice * order.quantity | currency:'USD':true }} </strong>
+    </p>
+  </div>
+</div>
